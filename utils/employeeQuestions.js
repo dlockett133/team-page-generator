@@ -27,7 +27,7 @@ const managerQuestions = [
         type: `list`,
         name: `addEmployee`,
         message: `Would you like to:`,
-        choices: [`Add an engineer?`, `Add an intern?` `Or to finish building my team?`]
+        choices: [`Add an engineer?`, `Add an intern?`, `Or to finish building my team?`]
     }
 ]
 
@@ -82,4 +82,9 @@ const internQuestions = [
         message: `What school does the intern attend?`
     }
 ]
-module.exports = questions
+
+module.exports = {
+    managerQuestions: managerQuestions,
+    engineerQuestions: engineerQuestions,
+    internQuestions:internQuestions
+}

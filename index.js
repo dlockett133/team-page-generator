@@ -5,12 +5,22 @@
 // will generate html after script is done
 
 
-
+const fs = require("fs");
 const inquirer = require("inquirer");
+const questions = require("./utils/employeeQuestions");
 const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
-Manager
-Employee
-inquirer
+
+function init() {
+    inquirer
+        .prompt(questions.managerQuestions)
+}
+
+init();
+
+
+// Manager
+// Employee
+// inquirer
