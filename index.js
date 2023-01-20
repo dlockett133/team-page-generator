@@ -16,6 +16,16 @@ const Engineer = require("./lib/Engineer");
 function init() {
     inquirer
         .prompt(questions.managerQuestions)
+        .then((data) => {
+            let name = data.managerName;
+            let id = data.managerId;
+            let email = data.managerEmail;
+            let officeNum = data.officeNum;
+            let addEmployee = data.addEmployee;
+
+            const newManager = new Manager(name, id, email, officeNum);
+            console.log(newManager);
+        })
 }
 
 init();
