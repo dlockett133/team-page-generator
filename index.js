@@ -13,9 +13,11 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
-const generateManager = require("./utils/generateHtml");
+const generate = require("./utils/generateHtml");
 let createTeam = false
-const myNewArray = []
+const managerArray = []
+const engineerArray = []
+const internArray = []
 function init() {
     inquirer
         .prompt(questions.managerQuestions)
@@ -26,7 +28,7 @@ function init() {
             let officeNumber = data.officeNumber;
             const newManager = new Manager(name, id, email, officeNumber);
             // console.log(newManager);
-            myNewArray.push(newManager);
+            managerArray.push(newManager);
             // console.log(myNewArray);
             addTeammate();
             // console.log(myNewArray)
@@ -51,7 +53,7 @@ function addTeammate() {
                         let email = data.engineerEmail;
                         let github = data.githubUsername;
                         const newEngineer = new Engineer(name, id, email, github);
-                        myNewArray.push(newEngineer)
+                        engineerArray.push(newEngineer)
                         // console.log(myNewArray);
                         addTeammate();
                     });
@@ -63,14 +65,15 @@ function addTeammate() {
                         let email = data.internEmail;
                         let school = data.school;
                         const newIntern = new Intern(name, id, email, school);
-                        myNewArray.push(newIntern)
+                        internArray.push(newIntern)
                         // console.log(myNewArray);
                         addTeammate();
                     });
             } else {
                 createTeam = true;
-                console.log(myNewArray)
-                generateManager(myNewArray);
+                generate.generateManager(managerArray)
+                generate.generateEngineer(engineerArray)
+                generate.generateIntern(internArray)
             }       
         } 
     })
