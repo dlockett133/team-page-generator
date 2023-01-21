@@ -27,14 +27,14 @@ function init() {
             // console.log(newManager);
             myNewArray.push(newManager);
             // console.log(myNewArray);
-            createTeam();
+            addTeammate();
             // console.log(myNewArray)
         })
         // console.log("myNewArray")
 
 }
 
-function createTeam() {
+function addTeammate() {
     inquirer
     .prompt(questions.createTeam)
     .then((data) => {
@@ -52,7 +52,7 @@ function createTeam() {
                         const newEngineer = new Engineer(name, id, email, github);
                         myNewArray.push(newEngineer)
                         // console.log(myNewArray);
-                        createTeam();
+                        addTeammate();
                     });
             } else if (addEmployee === `Add an intern`){
                 inquirer.prompt(questions.internQuestions)
@@ -61,10 +61,10 @@ function createTeam() {
                         let id = data.internId;
                         let email = data.internEmail;
                         let school = data.school;
-                        const newEIntern = new Engineer(name, id, email, github);
-                        myNewArray.push(newEIntern)
+                        const newIntern = new Intern(name, id, email, school);
+                        myNewArray.push(newIntern)
                         // console.log(myNewArray);
-                        createTeam();
+                        addTeammate();
                     });
             } else {
                 createTeam = true;
