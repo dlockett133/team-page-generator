@@ -13,6 +13,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
+const generateHtml = require("./utils/generateHtml");
 let createTeam = false
 const myNewArray = []
 function init() {
@@ -68,7 +69,7 @@ function addTeammate() {
                     });
             } else {
                 createTeam = true;
-                console.log(myNewArray)
+                generateHtml(myNewArray);
             }       
         } 
     })
