@@ -13,7 +13,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
-const generateHtml = require("./utils/generateHtml");
+const generateManager = require("./utils/generateHtml");
 let createTeam = false
 const myNewArray = []
 function init() {
@@ -23,8 +23,8 @@ function init() {
             let name = data.managerName;
             let id = data.managerId;
             let email = data.managerEmail;
-            let officeNum = data.officeNum;
-            const newManager = new Manager(name, id, email, officeNum);
+            let officeNumber = data.officeNumber;
+            const newManager = new Manager(name, id, email, officeNumber);
             // console.log(newManager);
             myNewArray.push(newManager);
             // console.log(myNewArray);
@@ -69,7 +69,8 @@ function addTeammate() {
                     });
             } else {
                 createTeam = true;
-                generateHtml(myNewArray);
+                console.log(myNewArray)
+                generateManager(myNewArray);
             }       
         } 
     })

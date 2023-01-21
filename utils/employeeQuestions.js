@@ -19,7 +19,7 @@ const managerQuestions = [
 
     {
         type: `input`,
-        name: `officeNum`,
+        name: `officeNumber`,
         message: `What is the team's office number?`
     }
 ]
