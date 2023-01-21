@@ -21,13 +21,6 @@ const managerQuestions = [
         type: `input`,
         name: `officeNum`,
         message: `What is the team's office number?`
-    },
-
-    {
-        type: `list`,
-        name: `addEmployee`,
-        message: `Would you like to:`,
-        choices: [`Add an engineer?`, `Add an intern?`, `Or to finish building my team?`]
     }
 ]
 
@@ -83,8 +76,18 @@ const internQuestions = [
     }
 ]
 
+const createTeam = [
+    {
+        type: `list`,
+        name: `addEmployee`,
+        message: `Would you like to:`,
+        choices: [`Add an engineer`, `Add an intern`, `Or finish building my team`]
+    }
+]
+
 module.exports = {
     managerQuestions: managerQuestions,
     engineerQuestions: engineerQuestions,
-    internQuestions:internQuestions
+    internQuestions:internQuestions,
+    createTeam: createTeam
 }
