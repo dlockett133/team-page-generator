@@ -39,7 +39,7 @@ function createTeam() {
     .prompt(questions.createTeam)
     .then((data) => {
         let addEmployee = data.addEmployee
-        console.log(addEmployee);
+        // console.log(addEmployee);
         
         if (createTeam === false) {
             if (addEmployee === `Add an engineer`){
