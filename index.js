@@ -1,11 +1,3 @@
-// Going to use inquire to prompt manager.js variable for class arguments
-// then will ask if we would like to add an engineer or intern
-// then will use inquirer to get information from prompts to inter in either intern or engineer class
-// if chosen neither, it will exit out of script
-// will generate html after script is done
-
-// I need to create ADDEMPLOYEE Choice options as a function and not a part of manager qeustions
-
 const fs = require("fs");
 const inquirer = require("inquirer");
 const questions = require("./utils/employeeQuestions");
@@ -14,27 +6,24 @@ const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
 const generateHtml = require("./utils/generateHtml");
-let createTeam = false
+const style = require("./utils/style");
+const css  = style();
 const managerArray = []
 const engineerArray = []
 const internArray = []
+let createTeam = false
+
 function init() {
-    inquirer
-        .prompt(questions.managerQuestions)
+    inquirer.prompt(questions.managerQuestions)
         .then((data) => {
             let name = data.managerName;
             let id = data.managerId;
             let email = data.managerEmail;
             let officeNumber = data.officeNumber;
             const newManager = new Manager(name, id, email, officeNumber);
-            // console.log(newManager);
             managerArray.push(newManager);
-            // console.log(myNewArray);
             addTeammate();
-            // console.log(myNewArray)
         })
-        // console.log("myNewArray")
-
 }
 
 function writeToFile (fileName, data){
@@ -79,6 +68,7 @@ function addTeammate() {
                 createTeam = true;
                 const html = generateHtml(managerArray, engineerArray, internArray)
                 writeToFile("index.html", html);
+                writeToFile("style.css", css);
             }       
         } 
     })
