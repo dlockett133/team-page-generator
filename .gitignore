@@ -6,7 +6,7 @@
 /dist
 
 index.html
-
+style.css
 ### macOS ###
 # General
 .DS_Store
