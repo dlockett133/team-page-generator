@@ -78,6 +78,7 @@ function addTeammate() {
             } else {
                 createTeam = true;
                 const html = generateHtml(managerArray, engineerArray, internArray)
+                writeToFile("index.html", html);
             }       
         } 
     })

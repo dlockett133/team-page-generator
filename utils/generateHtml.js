@@ -7,6 +7,25 @@ function generateManager (arr) {
             console.log(arr[i].id);
             console.log(arr[i].email);
             console.log(arr[i].officeNumber);
+            return `
+            <div class="col-md-4">
+              <div class="card">
+                <h5 class="card-header text-bg-info text-center name">
+                  ${arr[i].name}
+                </h5>
+                <div class="card-body">
+                  <div class="card-text">
+                    <ul>
+                      <li>ID: ${arr[i].id}</li>
+                      <li>Email: ${arr[i].email}</li>
+                      <li>Office Num: ${arr[i].officeNumber}</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-bg-info pt-4"></div>
+              </div>
+            </div>
+            `
         }
     }          
 }
@@ -20,6 +39,8 @@ function generateEngineer (arr) {
             console.log(arr[i].id);
             console.log(arr[i].email);
             console.log(arr[i].github);
+
+            
         }
     }
 }
@@ -40,7 +61,7 @@ function generateIntern (arr) {
 
 // create function that takes 3 arguments of arrays and invokes all 3 funcitons above
 function generateHtml (managerArray, engineerArray, internArray) {
-    generateManager(managerArray);
+    // generateManager(managerArray);
     generateEngineer(engineerArray);
     generateIntern(internArray);
 
@@ -70,23 +91,7 @@ function generateHtml (managerArray, engineerArray, internArray) {
         <div class="row mt-3">
             <div class="col-md-12">
             <div class="row">
-                <div class="col-md-4">
-                <div class="card">
-                    <h5 class="card-header text-bg-info text-center name">
-                    Card title
-                    </h5>
-                    <div class="card-body">
-                    <div class="card-text">
-                        <ul>
-                        <li>ID:</li>
-                        <li>Email:</li>
-                        <li>Office Number:</li>
-                        </ul>
-                    </div>
-                    </div>
-                    <div class="card-footer text-bg-info pt-4"></div>
-                </div>
-                </div>
+                ${generateManager(managerArray)}
                 <div class="col-md-4">
                 <div class="card">
                     <h5 class="card-header name">Card title</h5>
