@@ -39,9 +39,15 @@ function generateIntern (arr) {
 }
 
 // create function that takes 3 arguments of arrays and invokes all 3 funcitons above
-
-module.exports = {
-    generateManager,
-    generateEngineer,
-    generateIntern
+function generateHtml (managerArray, engineerArray, internArray) {
+    generateManager(managerArray);
+    generateEngineer(engineerArray);
+    generateIntern(internArray);
 }
+// module.exports = {
+//     generateManager,
+//     generateEngineer,
+//     generateIntern
+// }
+
+module.exports = generateHtml

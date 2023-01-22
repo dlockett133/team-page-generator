@@ -13,7 +13,7 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
-const generate = require("./utils/generateHtml");
+const generateHtml = require("./utils/generateHtml");
 let createTeam = false
 const managerArray = []
 const engineerArray = []
@@ -71,9 +71,10 @@ function addTeammate() {
                     });
             } else {
                 createTeam = true;
-                generate.generateManager(managerArray)
-                generate.generateEngineer(engineerArray)
-                generate.generateIntern(internArray)
+                generateHtml(managerArray, engineerArray, internArray)
+                // generate.generateManager(managerArray)
+                // generate.generateEngineer(engineerArray)
+                // generate.generateIntern(internArray)
             }       
         } 
     })
