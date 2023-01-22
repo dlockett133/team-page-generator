@@ -1,13 +1,15 @@
 function generateManager (arr) {
+    let managerCard = ``
     if (arr === undefined) {
         return "The input array is empty";
     } else{
         for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].name);
-            console.log(arr[i].id);
-            console.log(arr[i].email);
-            console.log(arr[i].officeNumber);
-            return `
+            let name = arr[i].name;
+            let id = arr[i].id;
+            let email = arr[i].email;
+            let officeNum = arr[i].officeNumber;
+
+            managerCard += `
             <div class="col-md-4">
               <div class="card">
                 <h5 class="card-header text-bg-info text-center name">
@@ -27,6 +29,7 @@ function generateManager (arr) {
             </div>
             `
         }
+        return managerCard;
     }          
 }
 
@@ -36,30 +39,30 @@ function generateEngineer (arr) {
         return "The input array is empty";
     } else{
         for(let i = 0; i < arr.length; i++){
-            // console.log(arr[i].name);
-            // console.log(arr[i].id);
-            // console.log(arr[i].email);
-            // console.log(arr[i].github);
+            let name = arr[i].name;
+            let id = arr[i].id;
+            let email = arr[i].email;
+            let github = arr[i].github;
 
             engineerCard += `
-            <div class="col-md-4">
-              <div class="card">
-                <h5 class="card-header text-bg-info text-center name">
-                  ${arr[i].name}
-                </h5>
-                <div class="card-body">
-                  <div class="card-text">
-                    <ul>
-                      <li>ID: ${arr[i].id}</li>
-                      <li>Email: ${arr[i].email}</li>
-                      <li>GitHub: ${arr[i].github}</li>
-                    </ul>
-                  </div>
+                <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-header text-bg-info text-center name">
+                    ${name}
+                    </h5>
+                    <div class="card-body">
+                    <div class="card-text">
+                        <ul>
+                        <li>ID: ${id}</li>
+                        <li>Email: ${email}</li>
+                        <li>GitHub: ${github}</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="card-footer text-bg-info pt-4"></div>
                 </div>
-                <div class="card-footer text-bg-info pt-4"></div>
-              </div>
-            </div>
-            `
+                </div>
+                `
         }
         return engineerCard;
     }
