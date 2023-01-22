@@ -71,10 +71,7 @@ function addTeammate() {
                     });
             } else {
                 createTeam = true;
-                generateHtml(managerArray, engineerArray, internArray)
-                // generate.generateManager(managerArray)
-                // generate.generateEngineer(engineerArray)
-                // generate.generateIntern(internArray)
+                const html = generateHtml(managerArray, engineerArray, internArray)
             }       
         } 
     })
