@@ -31,16 +31,17 @@ function generateManager (arr) {
 }
 
 function generateEngineer (arr) {
+    let engineerCard = ``
     if (arr === undefined) {
         return "The input array is empty";
     } else{
         for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].name);
-            console.log(arr[i].id);
-            console.log(arr[i].email);
-            console.log(arr[i].github);
+            // console.log(arr[i].name);
+            // console.log(arr[i].id);
+            // console.log(arr[i].email);
+            // console.log(arr[i].github);
 
-            return `
+            engineerCard += `
             <div class="col-md-4">
               <div class="card">
                 <h5 class="card-header text-bg-info text-center name">
@@ -60,6 +61,7 @@ function generateEngineer (arr) {
             </div>
             `
         }
+        return engineerCard;
     }
 }
 
