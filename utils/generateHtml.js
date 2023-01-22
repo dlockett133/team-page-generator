@@ -13,6 +13,7 @@ function generateManager (arr) {
             <div class="col-md-4">
               <div class="card">
                 <h5 class="card-header text-bg-info text-center name">
+                <ion-icon name="cafe-outline"></ion-icon>
                   ${name}
                 </h5>
                 <div class="card-body">
@@ -48,6 +49,7 @@ function generateEngineer (arr) {
                 <div class="col-md-4">
                 <div class="card">
                     <h5 class="card-header text-bg-info text-center name">
+                    <ion-icon name="glasses-outline"></ion-icon>
                     ${name}
                     </h5>
                     <div class="card-body">
@@ -83,6 +85,7 @@ function generateIntern (arr) {
                 <div class="col-md-4">
                 <div class="card">
                     <h5 class="card-header text-bg-info text-center name">
+                    <ion-icon name="school-outline"></ion-icon>
                     ${name}
                     </h5>
                     <div class="card-body">
@@ -143,6 +146,8 @@ function generateHtml (managerArray, engineerArray, internArray) {
             </div>
         </div>
         </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>        
     </body>
     </html>
 
