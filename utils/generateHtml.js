@@ -20,12 +20,12 @@ function generateManager (arr) {
                   <div class="card-text">
                     <ul>
                       <li><strong>ID:</strong> ${id}</li>
-                      <li><strong>Email:</strong> ${email}</li>
+                      <li><strong>Email: </strong><a href="mailto:${email}">${email}</a></li>
                       <li><strong>Office Number:</strong> ${officeNum}</li>
                     </ul>
                   </div>
                 </div>
-                <div class="card-footer text-bg-info pt-4"></div>
+                <div class="card-footer text-bg-success pt-4"></div>
               </div>
             </div>
             `
@@ -56,12 +56,12 @@ function generateEngineer (arr) {
                     <div class="card-text">
                         <ul>
                         <li><strong>ID:</strong> ${id}</li>
-                        <li><strong>Email:</strong> ${email}</li>
+                        <li><strong>Email: </strong><a href="mailto:${email}">${email}</a></li>
                         <li><strong>GitHub:</strong> ${github}</li>
                         </ul>
                     </div>
                     </div>
-                    <div class="card-footer text-bg-info pt-4"></div>
+                    <div class="card-footer text-bg-danger pt-4"></div>
                 </div>
                 </div>
                 `
@@ -92,12 +92,12 @@ function generateIntern (arr) {
                     <div class="card-text">
                         <ul>
                         <li><strong>ID:</strong> ${id}</li>
-                        <li><strong>Email:</strong> ${email}</li>
+                        <li><strong>Email: </strong><a href="mailto:${email}">${email}</a></li>
                         <li><strong>School:</strong> ${school}</li>
                         </ul>
                     </div>
                     </div>
-                    <div class="card-footer text-bg-info pt-4"></div>
+                    <div class="card-footer text-bg-warning pt-4"></div>
                 </div>
                 </div>
                 `
