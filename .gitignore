@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 
+# ignores all index.html and style.css files
 /dist
 
 index.html
