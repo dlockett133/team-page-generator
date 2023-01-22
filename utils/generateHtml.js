@@ -8,20 +8,20 @@ function generateManager (arr) {
             let id = arr[i].id;
             let email = arr[i].email;
             let officeNum = arr[i].officeNumber;
-
+            
             managerCard += `
             <div class="col-md-4">
               <div class="card">
-                <h5 class="card-header text-bg-info text-center name">
+                <h5 class="card-header text-bg-success text-center name">
                 <ion-icon name="cafe-outline"></ion-icon>
                   ${name}
                 </h5>
                 <div class="card-body">
                   <div class="card-text">
                     <ul>
-                      <li>ID: ${id}</li>
-                      <li>Email: ${email}</li>
-                      <li>Office Num: ${officeNum}</li>
+                      <li><strong>ID:</strong> ${id}</li>
+                      <li><strong>Email:</strong> ${email}</li>
+                      <li><strong>Office Number:</strong> ${officeNum}</li>
                     </ul>
                   </div>
                 </div>
@@ -48,16 +48,16 @@ function generateEngineer (arr) {
             engineerCard += `
                 <div class="col-md-4">
                 <div class="card">
-                    <h5 class="card-header text-bg-info text-center name">
+                    <h5 class="card-header text-bg-danger text-center name">
                     <ion-icon name="glasses-outline"></ion-icon>
                     ${name}
                     </h5>
                     <div class="card-body">
                     <div class="card-text">
                         <ul>
-                        <li>ID: ${id}</li>
-                        <li>Email: ${email}</li>
-                        <li>GitHub: ${github}</li>
+                        <li><strong>ID:</strong> ${id}</li>
+                        <li><strong>Email:</strong> ${email}</li>
+                        <li><strong>GitHub:</strong> ${github}</li>
                         </ul>
                     </div>
                     </div>
@@ -84,16 +84,16 @@ function generateIntern (arr) {
             internCard += `
                 <div class="col-md-4">
                 <div class="card">
-                    <h5 class="card-header text-bg-info text-center name">
+                    <h5 class="card-header text-bg-warning text-center name">
                     <ion-icon name="school-outline"></ion-icon>
                     ${name}
                     </h5>
                     <div class="card-body">
                     <div class="card-text">
                         <ul>
-                        <li>ID: ${id}</li>
-                        <li>Email: ${email}</li>
-                        <li>School: ${school}</li>
+                        <li><strong>ID:</strong> ${id}</li>
+                        <li><strong>Email:</strong> ${email}</li>
+                        <li><strong>School:</strong> ${school}</li>
                         </ul>
                     </div>
                     </div>
@@ -109,10 +109,7 @@ function generateIntern (arr) {
 
 // create function that takes 3 arguments of arrays and invokes all 3 funcitons above
 function generateHtml (managerArray, engineerArray, internArray) {
-    // generateManager(managerArray);
-    // generateEngineer(engineerArray);
-    // generateIntern(internArray);
-
+    
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -153,10 +150,5 @@ function generateHtml (managerArray, engineerArray, internArray) {
 
     `
 }
-// module.exports = {
-//     generateManager,
-//     generateEngineer,
-//     generateIntern
-// }
 
 module.exports = generateHtml
