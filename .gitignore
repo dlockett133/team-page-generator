@@ -5,6 +5,8 @@
 
 /dist
 
+index.html
+
 ### macOS ###
 # General
 .DS_Store

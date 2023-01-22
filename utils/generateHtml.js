@@ -40,7 +40,25 @@ function generateEngineer (arr) {
             console.log(arr[i].email);
             console.log(arr[i].github);
 
-            
+            return `
+            <div class="col-md-4">
+              <div class="card">
+                <h5 class="card-header text-bg-info text-center name">
+                  ${arr[i].name}
+                </h5>
+                <div class="card-body">
+                  <div class="card-text">
+                    <ul>
+                      <li>ID: ${arr[i].id}</li>
+                      <li>Email: ${arr[i].email}</li>
+                      <li>GitHub: ${arr[i].github}</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-bg-info pt-4"></div>
+              </div>
+            </div>
+            `
         }
     }
 }
@@ -92,15 +110,7 @@ function generateHtml (managerArray, engineerArray, internArray) {
             <div class="col-md-12">
             <div class="row">
                 ${generateManager(managerArray)}
-                <div class="col-md-4">
-                <div class="card">
-                    <h5 class="card-header name">Card title</h5>
-                    <div class="card-body">
-                    <p class="card-text">Card content</p>
-                    </div>
-                    <div class="card-footer">Card footer</div>
-                </div>
-                </div>
+                ${generateEngineer(engineerArray)}
                 <div class="col-md-4">
                 <div class="card">
                     <h5 class="card-header name">Card title</h5>
