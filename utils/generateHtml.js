@@ -13,14 +13,14 @@ function generateManager (arr) {
             <div class="col-md-4">
               <div class="card">
                 <h5 class="card-header text-bg-info text-center name">
-                  ${arr[i].name}
+                  ${name}
                 </h5>
                 <div class="card-body">
                   <div class="card-text">
                     <ul>
-                      <li>ID: ${arr[i].id}</li>
-                      <li>Email: ${arr[i].email}</li>
-                      <li>Office Num: ${arr[i].officeNumber}</li>
+                      <li>ID: ${id}</li>
+                      <li>Email: ${email}</li>
+                      <li>Office Num: ${officeNum}</li>
                     </ul>
                   </div>
                 </div>
@@ -69,15 +69,37 @@ function generateEngineer (arr) {
 }
 
 function generateIntern (arr) {
+    let internCard = ``
     if (arr === undefined) {
         return "The input array is empty";
     } else{
         for(let i = 0; i < arr.length; i++){
-            console.log(arr[i].name);
-            console.log(arr[i].id);
-            console.log(arr[i].email);
-            console.log(arr[i].school);
+            let name = arr[i].name;
+            let id = arr[i].id;
+            let email = arr[i].email;
+            let school = arr[i].school;
+
+            internCard += `
+                <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-header text-bg-info text-center name">
+                    ${name}
+                    </h5>
+                    <div class="card-body">
+                    <div class="card-text">
+                        <ul>
+                        <li>ID: ${id}</li>
+                        <li>Email: ${email}</li>
+                        <li>School: ${school}</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="card-footer text-bg-info pt-4"></div>
+                </div>
+                </div>
+                `
         }
+        return internCard;
     }
     
 }
@@ -85,8 +107,8 @@ function generateIntern (arr) {
 // create function that takes 3 arguments of arrays and invokes all 3 funcitons above
 function generateHtml (managerArray, engineerArray, internArray) {
     // generateManager(managerArray);
-    generateEngineer(engineerArray);
-    generateIntern(internArray);
+    // generateEngineer(engineerArray);
+    // generateIntern(internArray);
 
     return `
     <!DOCTYPE html>
@@ -116,15 +138,7 @@ function generateHtml (managerArray, engineerArray, internArray) {
             <div class="row">
                 ${generateManager(managerArray)}
                 ${generateEngineer(engineerArray)}
-                <div class="col-md-4">
-                <div class="card">
-                    <h5 class="card-header name">Card title</h5>
-                    <div class="card-body">
-                    <p class="card-text">Card content</p>
-                    </div>
-                    <div class="card-footer">Card footer</div>
-                </div>
-                </div>
+                ${generateIntern(internArray)}
             </div>
             </div>
         </div>
