@@ -37,6 +37,12 @@ function init() {
 
 }
 
+function writeToFile (fileName, data){
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.log(err) : console.log("Your index.html has been generated")
+    })
+}
+
 function addTeammate() {
     inquirer
     .prompt(questions.createTeam)
