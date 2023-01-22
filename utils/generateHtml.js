@@ -57,7 +57,7 @@ function generateEngineer (arr) {
                         <ul>
                         <li><strong>ID:</strong> ${id}</li>
                         <li><strong>Email: </strong><a href="mailto:${email}">${email}</a></li>
-                        <li><strong>GitHub:</strong> ${github}</li>
+                        <li><strong>GitHub: </strong><a href="https://github.com/${github}" target="_blank">${github}</a> </li>
                         </ul>
                     </div>
                     </div>
