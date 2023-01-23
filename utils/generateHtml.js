@@ -11,7 +11,7 @@ function generateManager (arr) {
             
             managerCard += `
             <div class="col-md-4">
-              <div class="card">
+              <div class="card shadow-lg">
                 <h5 class="card-header text-bg-success text-center name">
                 <ion-icon name="cafe-outline"></ion-icon>
                   ${name}
@@ -47,7 +47,7 @@ function generateEngineer (arr) {
 
             engineerCard += `
                 <div class="col-md-4">
-                <div class="card">
+                <div class="card shadow-lg">
                     <h5 class="card-header text-bg-danger text-center name">
                     <ion-icon name="glasses-outline"></ion-icon>
                     ${name}
@@ -83,7 +83,7 @@ function generateIntern (arr) {
 
             internCard += `
                 <div class="col-md-4">
-                <div class="card">
+                <div class="card shadow-lg">
                     <h5 class="card-header text-bg-warning text-center name">
                     <ion-icon name="school-outline"></ion-icon>
                     ${name}
