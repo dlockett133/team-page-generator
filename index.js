@@ -37,7 +37,6 @@ function addTeammate() {
     .prompt(questions.createTeam)
     .then((data) => {
         let addEmployee = data.addEmployee
-        // console.log(addEmployee);
         
         if (createTeam === false) {
             if (addEmployee === `Add an engineer`){
@@ -49,7 +48,6 @@ function addTeammate() {
                         let github = data.githubUsername;
                         const newEngineer = new Engineer(name, id, email, github);
                         engineerArray.push(newEngineer)
-                        // console.log(myNewArray);
                         addTeammate();
                     });
             } else if (addEmployee === `Add an intern`){
@@ -61,7 +59,6 @@ function addTeammate() {
                         let school = data.school;
                         const newIntern = new Intern(name, id, email, school);
                         internArray.push(newIntern)
-                        // console.log(myNewArray);
                         addTeammate();
                     });
             } else {
@@ -75,8 +72,3 @@ function addTeammate() {
 }
 
 init();
-
-
-// Manager
-// Employee
-// inquirer

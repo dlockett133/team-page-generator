@@ -8,7 +8,7 @@ const managerQuestions = [
     {
         type: `input`,
         name: `managerId`,
-        message: `What is the team manager employee's ID?`
+        message: `What is the team manager's employee ID?`
     },
 
     {
@@ -20,7 +20,7 @@ const managerQuestions = [
     {
         type: `input`,
         name: `officeNumber`,
-        message: `What is the team's office number?`
+        message: `What is the team manager's office number?`
     }
 ]
 
@@ -81,7 +81,7 @@ const createTeam = [
         type: `list`,
         name: `addEmployee`,
         message: `Would you like to:`,
-        choices: [`Add an engineer`, `Add an intern`, `Or finish building my team`]
+        choices: [`Add an engineer`, `Add an intern`, `Finish building my team`]
     }
 ]
 
