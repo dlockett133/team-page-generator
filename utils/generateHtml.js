@@ -129,7 +129,7 @@ function generateHtml (managerArray, engineerArray, internArray) {
     <body>
         <nav class="navbar text-bg-primary p-3">
         <div class="container-fluid d-flex justify-content-center">
-            <span class="navbar-brand text-light text-center mb-0 h1">Navbar</span>
+            <span class="navbar-brand text-light text-center mb-0 h1">My Team</span>
         </div>
         </nav>
         <div class="container">
