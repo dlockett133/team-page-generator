@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# criteria folder
+/criteria
+
 # ignores all index.html and style.css files
 /dist
 
